@@ -1,0 +1,76 @@
+/* FORM
+
+input, select, textarea
+  +transition
+
+.sb-form, .newsletter
+  input
+    &[type="text"], &[type="email"], &[type="tel"], &[type="url"]
+      +form
+  input[type="submit"]
+    +btn
+  textarea
+    +form
+    margin-bottom: 5px
+    height: 130px
+    resize: vertical
+
+.contact-form
+  input
+    &[type="text"], &[type="email"], &[type="tel"], &[type="url"]
+      +form
+  input[type="submit"]
+    +btn
+  textarea
+    +form
+    height: 130px
+    resize: vertical
+  select
+    +form
+    height: 40px
+    margin-bottom: 10px
+  .g-recaptcha
+    float: right
+
+input, textarea
+  +input-placeholder
+    color: $blue
+
+.sb-form input[type="submit"][disabled], .contact-form input[type="submit"][disabled]
+  opacity: 0.7
+  cursor: not-allowed
+  &:hover
+    opacity: 0.7
+    cursor: not-allowed
+
+.sb-form input.wpcf7-captchar, .contact-form input.wpcf7-captchar
+  width: 100%
+
+.wpcf7-form-control-wrap
+  display: block !important
+  &.agree
+    display: inline-block !important
+    width: 20px
+
+.agreement
+  font-weight: 400
+  margin: 15px 0
+
+.wpcf7-not-valid-tip
+  font-size: 10px !important
+  margin: -7px 0 10px 5px
+
+.wpcf7-validation-errors
+  border: 0 !important
+  text-align: center
+  font-size: 11px
+  color: #f00
+
+.ajax-loader
+  position: absolute
+  margin-top: -40px
+
+span.wpcf7-list-item
+  margin: 0 !important
+
+/* END FORM

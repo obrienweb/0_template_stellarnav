@@ -1,0 +1,95 @@
+.stellarnav, .stellarnav.mobile
+  font-weight: 400
+  font-size: 15px
+  position: relative
+  background: $blue
+  a
+    color: $white !important
+  ul
+    text-transform: uppercase
+    ul
+      text-transform: capitalize
+      background: $blue
+      font-size: 14px
+      li
+        &:hover
+          background: darken($blue, 3%)
+        a
+          padding-top: 12px
+          padding-bottom: 12px
+        ul
+          background: darken($blue, 6%)
+          li
+            &:hover
+              background: darken($blue, 9%)
+            ul
+              background: darken($blue, 9%)
+              li
+                &:hover
+                  background: darken($blue, 12%)
+                ul
+                  background: darken($blue, 12%)
+                  li
+                    &:hover
+                      background: darken($blue, 15%)
+
+.stellarnav.mobile
+  .dd-toggle
+    padding: 15px !important
+  ul
+    background: $blue
+    li
+      &:hover
+        background: darken($blue, 5%)
+    ul
+      background: darken($blue, 5%)
+      .dd-toggle
+        height: 40px
+      li
+        &:hover
+          background: darken($blue, 10%)
+        a
+          padding: 12px 0 12px 25px !important
+        ul
+          li
+            background: darken($blue, 10%)
+            &:hover
+              background: darken($blue, 15%)
+            a
+              padding-left: 35px !important
+            ul
+              li
+                background: darken($blue, 15%)
+                &:hover
+                  background: darken($blue, 20%)
+                a
+                  padding-left: 45px !important
+                ul
+                  li
+                    background: darken($blue, 20%)
+                    &:hover
+                      background: darken($blue, 25%)
+                    a
+                      padding-left: 55px !important
+
+.stellarnav.mobile .call-btn-mobile, .stellarnav.mobile .location-btn-mobile, .stellarnav.mobile .menu-toggle
+  padding-top: 20px
+  padding-bottom: 20px
+  &:hover
+    color: $white !important
+
+.stellarnav.mobile .close-menu
+  width: 100%
+
+//---padding between menu links
+.stellarnav>ul>li>a
+  padding-top: 20px
+  padding-bottom: 20px
+  padding-left: 3px
+  padding-right: 3px
+  @media (min-width: $medium)
+    padding-left: between(3px, 23px, $medium, $large)
+    padding-right: between(3px, 23px, $medium, $large)
+  @media (min-width: $large)
+    padding-left: 23px
+    padding-right: 23px

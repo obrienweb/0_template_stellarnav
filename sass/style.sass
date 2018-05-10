@@ -1,0 +1,313 @@
+/*
+  Theme Name: Last, First (website.com)
+  Author: NKP Development Team
+  Description: NKP Medical responsive theme
+  Template: nkpv2
+
+@charset "UTF-8"
+
+/*---- Do Not Remove ----*/
+@import url(https://static.nkpmedical.com/unsemantic/css/nkp.min.css)
+@import url(https://static.nkpmedical.com/stellarnav/stellarnav.min.css)
+/*---- Do Not Remove ----*/
+
+// VARIABLES
+
+$font-stack: 'proxima-nova', sans-serif
+$font-size: 16px
+
+$black: #000
+$white: #fff
+$blue: #1c97d4
+$gray: #ccc
+
+$small: 300px
+$medium: 768px
+$desktop: 1024px
+$large: 1200px
+
+@function between($from, $to, $fromWidth, $toWidth)
+  $slope: ($to - $from) / ($toWidth - $fromWidth)
+  $base: $from - $slope * $fromWidth
+
+  @return calc(#{$base} + #{100vw * $slope})
+
+@import "mixins"
+
+// STLYES
+
+body
+  font-family: $font-stack
+  font-size: $font-size
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+h1, h2, h3, h4, h5
+  font-family: $font-stack
+  margin: 20px 0
+  font-weight: 300
+
+h1
+  font-size: 34px
+  line-height: 34px
+
+h2
+  font-size: 30px
+  line-height: 30px
+
+h3
+  font-size: 26px
+  line-height: 26px
+
+h4
+  font-size: 24px
+  line-height: 24px
+
+h5
+  font-size: 22px
+  line-height: 22px
+h6
+  font-size: 20px
+  line-height: 20px
+
+p
+  padding: 10px 0
+  line-height: 28px
+
+a
+  color: $blue
+  text-decoration: none
+  outline: none
+  +transition
+  &:visited, &:link
+    color: $blue
+    text-decoration: none
+    outline: none
+    +transition
+  &:hover
+    color: darken($blue, 20%)
+    text-decoration: none
+    outline: none
+
+ul, ol
+  clear: both
+
+.relative
+  position: relative
+
+.fl
+  float: left
+
+.fr
+  float: right
+
+.fn
+  float: none
+  display: inline-block
+
+.tal
+  text-align: left
+
+.tar
+  text-align: right
+
+.tac
+  text-align: center
+
+.clr-l
+  clear: left
+
+.clr-r
+  clear: right
+
+.clr, .clear
+  clear: both
+
+.nodisp
+  display: none
+
+@import "form"
+
+@import "stellarnav"
+
+/* NKP GLOBAL STYLES
+
+img
+  border: 0px
+
+.img-resp, .img-responsive
+  max-width: 100%
+  height: auto
+
+img
+  &.left, &.alignleft
+    float: left
+    margin: 10px 15px 0px 0px
+
+.img-l
+  float: left
+  margin: 10px 15px 0px 0px
+
+img
+  &.right, &.alignright
+    float: right
+    margin: 10px 0px 0px 15px
+
+.img-r
+  float: right
+  margin: 10px 0px 0px 15px
+
+iframe
+  width: 100%
+
+.embed
+  position: relative
+  display: block
+  height: 0px
+  padding: 0px
+  overflow: hidden
+
+.embed-responsive
+  &.embed-responsive-4x3
+    padding-bottom: 75%
+  &.embed-responsive-16x9
+    padding-bottom: 56.25%
+  .embed-item, iframe, embed, object
+    position: absolute
+    top: 0px
+    bottom: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    border: 0px none
+
+/* desktop view bxa gallery
+
+.patient-single
+  width: 50%
+  img
+    width: 96%
+    height: auto
+
+.flex
+  +flex
+
+.flex-center
+  +flex
+  flex-direction: column
+  justify-content: center
+  height: 100%
+
+.align-items
+  +flex
+  align-items: center
+
+.btn
+  +btn
+
+#logo
+  image-rendering: -webkit-optimize-contrast
+  image-rendering: -moz-crisp-edges
+  image-rendering: -o-crisp-edges
+  image-rendering: crisp-edges
+
+#main
+  padding: 40px 0
+  #content
+    position: relative
+    .feat-img
+      float: left
+      margin: 15px
+      max-width: 100%
+      height: auto
+    .single
+      float: left
+    .pagination
+      margin-bottom: 20px
+      font-size: $font-size
+      .current
+        +circle($blue,$white,1px solid $blue)
+      a
+        +circle(transparent,$blue,1px solid $blue)
+        &:hover
+          background: $blue
+          color: $white
+    li
+      padding: 5px
+    ul
+      margin: 15px 0 15px 20px
+      list-style: disc
+      clear: none
+    ol
+      margin: 0 0 20px 20px
+      list-style: decimal
+      clear: none
+  .list
+    margin: 0 !important
+    list-style: none !important
+    ul
+      margin: 0 !important
+      li
+        font-size: 0.9375em
+        margin: 0
+        padding: 0 !important
+        list-style: none
+        a
+          border-bottom: 1px solid #eee
+          padding: 10px 15px
+          display: block
+          +transition(all .25s ease-out)
+          &:hover
+            color: $white
+            background: $blue
+
+#patient-listing-sidebar ul
+  margin: 0 !important
+  li ul
+    margin: 0 !important
+
+/*--- GALLERY RESPONSIVE DESKTOP
+
+.patient-content, .patient-listing
+  width: 48% !important
+  float: left
+
+.patient-list-image
+  width: 90%
+
+.patient-listing > div
+  width: 50%
+  float: left
+
+/*---- START MEDIA QUERIES ----
+@media only screen and (max-width: 767px)
+  /* GALLERY RESPONSIVE NON-DESKTOP
+  #patient-listing
+    .patient-content
+      width: 100% !important
+    .patient-listing
+      width: 100% !important
+      > div
+        width: 50%
+  .patient-entry .patient-single
+    width: 100%
+  iframe
+    width: 100%
+  .patient-single
+    width: 100% !important
+  .contact-form
+    .agreement
+      margin-top: 0
+    .g-recaptcha
+      float: none
+
+/*MOBILE
+
+@media only screen and (max-width: 960px) and (min-width: 768px)
+
+/*TABLET
+
+@media only screen and (max-width: 1024px) and (min-width: 960px)
+
+/*960 DESKTOP
+/*---- END MEDIA QUERIES ----
