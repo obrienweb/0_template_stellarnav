@@ -4,6 +4,7 @@
  * Template: nkpv2 */
 /*---- Do Not Remove ---- */
 @import url(https://static.nkpmedical.com/unsemantic/css/nkp.min.css);
+@import url(https://static.nkpmedical.com/stellarnav/stellarnav.min.css);
 /*---- Do Not Remove ---- */
 body {
   font-family: "proxima-nova", sans-serif;
@@ -21,8 +22,8 @@ h1 {
   line-height: 34px; }
 
 h2 {
-  font-size: 32px;
-  line-height: 32px; }
+  font-size: 30px;
+  line-height: 30px; }
 
 h3 {
   font-size: 26px;
@@ -124,7 +125,7 @@ input, select, textarea {
 .sb-form input[type="submit"], .newsletter input[type="submit"] {
   background: #1c97d4;
   color: #fff !important;
-  padding: 1em 2em;
+  padding: 1em 1em;
   margin: 15px auto;
   height: auto;
   width: 100%;
@@ -172,7 +173,7 @@ input, select, textarea {
 .contact-form input[type="submit"] {
   background: #1c97d4;
   color: #fff !important;
-  padding: 1em 2em;
+  padding: 1em 1em;
   margin: 15px auto;
   height: auto;
   width: 100%;
@@ -215,7 +216,7 @@ input, select, textarea {
   margin: 0 0 10px;
   padding: 12px;
   border: 1px #ccc solid;
-  height: 37px;
+  height: 40px;
   margin-bottom: 10px; }
 .contact-form .g-recaptcha {
   float: right; }
@@ -265,6 +266,9 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   position: absolute;
   margin-top: -40px; }
 
+span.wpcf7-list-item {
+  margin: 0 !important; }
+
 /* END FORM */
 .stellarnav, .stellarnav.mobile {
   font-weight: 400;
@@ -299,22 +303,36 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 .stellarnav.mobile .dd-toggle {
   padding: 15px !important; }
-.stellarnav.mobile ul li:hover {
-  background: #1987bd; }
 .stellarnav.mobile ul {
   background: #1c97d4; }
+  .stellarnav.mobile ul li:hover {
+    background: #1987bd; }
   .stellarnav.mobile ul ul {
     background: #1987bd; }
+    .stellarnav.mobile ul ul .dd-toggle {
+      height: 40px; }
     .stellarnav.mobile ul ul li:hover {
       background: #1677a7; }
     .stellarnav.mobile ul ul li a {
       padding: 12px 0 12px 25px !important; }
-    .stellarnav.mobile ul ul li ul li a {
-      padding-left: 35px !important; }
-    .stellarnav.mobile ul ul li ul li ul li a {
-      padding-left: 45px !important; }
-    .stellarnav.mobile ul ul li ul li ul li ul li a {
-      padding-left: 55px !important; }
+    .stellarnav.mobile ul ul li ul li {
+      background: #1677a7; }
+      .stellarnav.mobile ul ul li ul li:hover {
+        background: #136790; }
+      .stellarnav.mobile ul ul li ul li a {
+        padding-left: 35px !important; }
+      .stellarnav.mobile ul ul li ul li ul li {
+        background: #136790; }
+        .stellarnav.mobile ul ul li ul li ul li:hover {
+          background: #10577a; }
+        .stellarnav.mobile ul ul li ul li ul li a {
+          padding-left: 45px !important; }
+        .stellarnav.mobile ul ul li ul li ul li ul li {
+          background: #10577a; }
+          .stellarnav.mobile ul ul li ul li ul li ul li:hover {
+            background: #0d4763; }
+          .stellarnav.mobile ul ul li ul li ul li ul li a {
+            padding-left: 55px !important; }
 
 .stellarnav.mobile .call-btn-mobile, .stellarnav.mobile .location-btn-mobile, .stellarnav.mobile .menu-toggle {
   padding-top: 20px;
@@ -410,6 +428,35 @@ iframe {
   justify-content: center;
   height: 100%; }
 
+.align-items {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center; }
+
+.btn {
+  background: #1c97d4;
+  color: #fff !important;
+  padding: 1em 1em;
+  margin: 15px auto;
+  height: auto;
+  width: 100%;
+  max-width: 210px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  clear: both;
+  border: 0; }
+
 #logo {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: -moz-crisp-edges;
@@ -431,36 +478,36 @@ iframe {
       margin-bottom: 20px;
       font-size: 16px; }
       #main #content .pagination .current {
-        background: blue;
-        color: white;
+        background: #1c97d4;
+        color: #fff;
         padding: 5px;
         margin: 4px;
         width: 20px;
         height: 20px;
         display: inline-block;
         text-align: center;
-        border: 1px solid blue;
+        border: 1px solid #1c97d4;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         border-radius: 50%; }
       #main #content .pagination a {
         background: transparent;
-        color: blue;
+        color: #1c97d4;
         padding: 5px;
         margin: 4px;
         width: 20px;
         height: 20px;
         display: inline-block;
         text-align: center;
-        border: 1px solid blue;
+        border: 1px solid #1c97d4;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         border-radius: 50%; }
         #main #content .pagination a:hover {
-          background: blue;
-          color: white; }
+          background: #1c97d4;
+          color: #fff; }
     #main #content li {
       padding: 5px; }
     #main #content ul {
@@ -477,16 +524,13 @@ iframe {
     #main .list ul {
       margin: 0 !important; }
       #main .list ul li {
-        border-bottom: 1px solid #eee;
         font-size: 0.9375em;
         margin: 0;
         padding: 0 !important;
         list-style: none; }
-        #main .list ul li:last-of-type {
-          border-bottom: 0; }
         #main .list ul li a {
+          border-bottom: 1px solid #eee;
           padding: 10px 15px;
-          color: #000;
           display: block;
           -webkit-transition: all 0.25s ease-out;
           -moz-transition: all 0.25s ease-out;
@@ -494,7 +538,7 @@ iframe {
           transition: all 0.25s ease-out; }
           #main .list ul li a:hover {
             color: #fff;
-            background: blue; }
+            background: #1c97d4; }
 
 #patient-listing-sidebar ul {
   margin: 0 !important; }
@@ -532,6 +576,8 @@ iframe {
   .patient-single {
     width: 100% !important; }
 
+  .contact-form .agreement {
+    margin-top: 0; }
   .contact-form .g-recaptcha {
     float: none; } }
 /*MOBILE */
