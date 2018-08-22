@@ -222,15 +222,15 @@ input, select, textarea {
   float: right; }
 
 input.placeholder, textarea.placeholder {
-  color: #1c97d4; }
+  color: #000; }
 input:-moz-placeholder, textarea:-moz-placeholder {
-  color: #1c97d4; }
+  color: #000; }
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #1c97d4; }
+  color: #000; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #1c97d4; }
+  color: #000; }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #1c97d4; }
+  color: #000; }
 
 .sb-form input[type="submit"][disabled], .contact-form input[type="submit"][disabled] {
   opacity: 0.7;
@@ -411,6 +411,30 @@ iframe {
     width: 96%;
     height: auto; }
 
+/* gdpr */
+#cookie_disclaimer {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  background: #dcdcdc;
+  color: #000; }
+  #cookie_disclaimer a:not(.cookie-accept) {
+    border-bottom: 1px #333 solid;
+    padding-bottom: 1px;
+    display: inline; }
+
+.cookie-accept {
+  background: #c84cca;
+  color: #FFF;
+  display: block;
+  width: 20%;
+  margin: 10px auto 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; }
+  .cookie-accept:hover {
+    background: #fff; }
+
 .flex {
   display: -webkit-box;
   display: -moz-box;
@@ -462,6 +486,16 @@ iframe {
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
   image-rendering: crisp-edges; }
+
+#slider {
+  position: relative; }
+  #slider .slides > li > div {
+    height: 820px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover; }
+  #slider .slide1 {
+    background-image: url(images/slide1.jpg); }
 
 #main {
   padding: 40px 0; }

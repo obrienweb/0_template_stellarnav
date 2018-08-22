@@ -190,6 +190,30 @@ iframe
     width: 96%
     height: auto
 
+/* gdpr
+#cookie_disclaimer
+  width: 100%
+  height: auto
+  padding: 10px 0
+  background: #dcdcdc
+  color: #000
+  a:not(.cookie-accept)
+    border-bottom: 1px #333 solid
+    padding-bottom: 1px
+    display: inline
+
+.cookie-accept
+  background: #c84cca
+  color: #FFF
+  display: block
+  width: 20%
+  margin: 10px auto 0
+  padding: 5px 10px
+  border-radius: 4px
+  cursor: pointer
+  &:hover
+    background: #fff
+
 .flex
   +flex
 
@@ -211,6 +235,18 @@ iframe
   image-rendering: -moz-crisp-edges
   image-rendering: -o-crisp-edges
   image-rendering: crisp-edges
+
+#slider
+  position: relative
+  .slides
+    > li
+      > div
+        height: 820px
+        background-repeat: no-repeat
+        background-position: top center
+        background-size: cover
+  .slide1
+    background-image: url(images/slide1.jpg)
 
 #main
   padding: 40px 0

@@ -1,0 +1,57 @@
+<xmp>
+
+
+<!-- add this to the header right after the body tag -->
+
+<!-- gdpr -->
+<?php if (!isset($_COOKIE["disclaimer"])){?>
+<div id="cookie_disclaimer">
+	<div class="grid-container">
+		<div class="grid-100 tac">
+			This site uses cookies to make the site simpler. Further information is provided in our <a href="/privacy-policy/">Privacy Policy</a>.
+			<a class="cookie-accept">Accept</a>
+		</div>
+	</div>
+</div>
+<?php } ?>
+
+
+
+<!-- add this to the CSS , customize button color accordingly -->
+
+/* gdpr */
+#cookie_disclaimer{width:100%; height:auto; padding:10px 0; background: #dcdcdc; color:#000;}
+#cookie_disclaimer a:not(.cookie-accept) {border-bottom:1px #333 solid; padding-bottom:1px; display:inline;}
+.cookie-accept{background: #c84cca;color: #FFF;display: block; width:20%; margin:10px auto 0; padding:5px 10px;border-radius: 4px;cursor:pointer;}
+.cookie-accept:hover{background: #fff;}
+
+
+
+<!-- add this to the custom.js -->
+// gdpr 
+jQuery(document).ready(function($) {
+
+jQuery('.cookie-accept').click(function() {
+  jQuery('#cookie-disclaimer').hide();
+
+});
+
+
+$('.cookie-accept').click(function(){
+  $('#cookie_disclaimer').slideUp();
+
+  var nDays = 999;
+  var cookieName = "disclaimer";
+  var cookieValue = "true";
+
+  var today = new Date();
+  var expire = new Date();
+  expire.setTime(today.getTime() + 3600000*24*nDays);
+  document.cookie = cookieName+"="+escape(cookieValue)+";expires="+expire.toGMTString()+";path=/";
+ });
+
+
+ });
+
+
+</xmp>

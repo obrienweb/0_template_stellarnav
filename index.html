@@ -5,12 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="https://static.nkpmedical.com/stellarnav/stellarnav.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico">
     <link rel="stylesheet" type="text/css" media="all" href="style.css">
     <!--if lt IE 9script(src='/wp-content/themes/nkp/unsemantic/js/html5.min.js')
     -->
   </head>
   <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+
+    <!-- gdpr -->
+    <?php if (!isset($_COOKIE["disclaimer"])){?>
+    <div id="cookie_disclaimer">
+      <div class="grid-container">
+        <div class="grid-100 tac">
+          This site uses cookies to make the site simpler. Further information is provided in our <a href="/privacy-policy/">Privacy Policy</a>.
+          <a class="cookie-accept">Accept</a>
+        </div>
+      </div>
+    </div>
+    <?php } ?>
+
     <div id="logo" itemscope="" itemtype="http://schema.org/Physician">
       <a itemprop="url" href="#" title="{{{Practice Name}}}, {{{Doctor Name}}}, {{{City}}}, {{{State}}}">
         <img class="img-resp" itemprop="logo" src="images/logo.png" alt="{{{Practice Name}}}, {{{Doctor Name}}}, {{{City}}}, {{{State}}}">
