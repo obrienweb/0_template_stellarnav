@@ -17,9 +17,9 @@ $font-stack: 'proxima-nova', sans-serif
 $font-size: 16px
 
 $black: #000
+$gray: #ccc
 $white: #fff
 $blue: #1c97d4
-$gray: #ccc
 
 $small: 300px
 $medium: 768px
@@ -45,7 +45,7 @@ body
 
 h1, h2, h3, h4, h5
   font-family: $font-stack
-  margin: 20px 0
+  margin: 0 0 15px
   font-weight: 300
 
 h1
@@ -78,17 +78,14 @@ p
 a
   color: $blue
   text-decoration: none
-  outline: none
   +transition
   &:visited, &:link
     color: $blue
     text-decoration: none
-    outline: none
     +transition
   &:hover
     color: darken($blue, 20%)
     text-decoration: none
-    outline: none
 
 ul, ol
   clear: both
@@ -174,12 +171,10 @@ iframe
   &.embed-responsive-16x9
     padding-bottom: 56.25%
   .embed-item, iframe, embed, object
-    position: absolute
     top: 0px
     bottom: 0px
     left: 0px
-    width: 100%
-    height: 100%
+    //width: 100%
     border: 0px none
 
 /* desktop view bxa gallery

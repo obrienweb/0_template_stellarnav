@@ -16,6 +16,9 @@ jQuery(document).ready(function($) {
 		controlNav: false
 	});
 
+
+	// cookie disclaimer
+
 	jQuery('.cookie-accept').click(function() {
 		jQuery('#cookie-disclaimer').hide();
 	});
