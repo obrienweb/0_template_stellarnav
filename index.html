@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--
+    oooo   oooo oooo   oooo oooooooooo
+     8888o  88   888  o88    888    888
+     88 888o88   888888      888oooo88
+     88   8888   888  88o    888
+    o88o    88  o888o o888o o888o
+  -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,20 +16,33 @@
     <link rel="stylesheet" type="text/css" media="all" href="style.css">
     <!--if lt IE 9script(src='/wp-content/themes/nkp/unsemantic/js/html5.min.js')
     -->
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+      window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#edeff5",
+          "text": "#838391"
+        },
+        "button": {
+          "background": "#4b81e8"
+        }
+      },
+      "position": "top",
+      "content": {
+        "message": "This site uses cookies to make the site simpler. Further information is provided in our",
+        "dismiss": "Accept",
+        "link": "Privacy Policy",
+        "href": "/privacy-policy/"
+      }
+      })});
+    </script>
+
   </head>
   <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
-
-    <!-- gdpr -->
-    <?php if (!isset($_COOKIE["disclaimer"])){?>
-    <div id="cookie_disclaimer">
-      <div class="grid-container">
-        <div class="grid-100 tac">
-          This site uses cookies to make the site simpler. Further information is provided in our <a href="/privacy-policy/">Privacy Policy</a>.
-          <a class="cookie-accept">Accept</a>
-        </div>
-      </div>
-    </div>
-    <?php } ?>
 
     <div id="logo" itemscope="" itemtype="http://schema.org/Physician">
       <a itemprop="url" href="#" title="{{{Practice Name}}}, {{{Doctor Name}}}, {{{City}}}, {{{State}}}">
@@ -71,7 +91,7 @@
       </ul>
     </nav>
 
-    <div id="slider">
+    <div id="slider" class="grid-100 grid-parent">
       <ul class="slides">
         <li>
           <div class="slide1"></div>
