@@ -25,6 +25,9 @@ $px30: 1.875em
   left: 0
   right: 0
 
+=cubic-bezier()
+  transition: .5s all cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
 =transition ($transition: all .5s ease-out)
   -webkit-transition: $transition
   -moz-transition: $transition
@@ -88,12 +91,12 @@ $px30: 1.875em
   color: $black
   background: $white
   font-family: $font-stack
-  font-size: $font-size
+  font-size: $font-size - 1
   +box-sizing
   width: 100%
   margin: 0 0 10px
   padding: 12px
-  border: 1px #ccc solid
+  border: 1px solid #ccc
 
 =btn()
   background: $blue
@@ -113,6 +116,7 @@ $px30: 1.875em
   cursor: pointer
   clear: both
   border: 0
+  transform: perspective(1px) translateZ(0px)
 
 =circle($background,$color,$border)
   background: $background

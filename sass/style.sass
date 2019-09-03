@@ -8,6 +8,7 @@
 
 /*---- Do Not Remove ----*/
 @import url(https://static.nkpmedical.com/unsemantic/css/nkp.min.css)
+@import url(https://use.fontawesome.com/releases/v5.8.2/css/all.css)
 @import url(https://static.nkpmedical.com/stellarnav/stellarnav.min.css)
 /*---- Do Not Remove ----*/
 
@@ -17,7 +18,7 @@ $font-stack: 'proxima-nova', sans-serif
 $font-size: 16px
 
 $black: #000
-$gray: #ccc
+$gray: #8b8b8b
 $white: #fff
 $blue: #1c97d4
 
@@ -47,6 +48,10 @@ h1, h2, h3, h4, h5
   font-family: $font-stack
   margin: 0 0 15px
   font-weight: 300
+
+#main #content
+  h1:not(:first-of-type), h2, h3, h4, h5
+    margin-top: 40px
 
 h1
   font-size: 34px
@@ -155,9 +160,6 @@ img
   float: right
   margin: 10px 0px 0px 15px
 
-iframe
-  width: 100%
-
 .embed
   position: relative
   display: block
@@ -177,6 +179,18 @@ iframe
     //width: 100%
     border: 0px none
 
+.videoWrapper
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 25px
+  height: 0
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
 /* desktop view bxa gallery
 
 .patient-single
@@ -194,7 +208,7 @@ iframe
   justify-content: center
   height: 100%
 
-.align-items
+.align-center
   +flex
   align-items: center
 
@@ -244,11 +258,11 @@ iframe
       padding: 5px
     ul
       margin: 15px 0 15px 20px
-      list-style: disc
+      //list-style: disc
       clear: none
     ol
       margin: 0 0 20px 20px
-      list-style: decimal
+      //list-style: decimal
       clear: none
   .list
     margin: 0 !important
@@ -268,6 +282,13 @@ iframe
           &:hover
             color: $white
             background: $blue
+            padding-left: 30px
+      ul
+        margin-left: 20px !important
+
+.post-divider
+  padding: 20px 0
+  border-bottom: 1px solid #ccc
 
 #patient-listing-sidebar ul
   margin: 0 !important
@@ -306,8 +327,6 @@ iframe
   .contact-form
     .agreement
       margin-top: 0
-    .g-recaptcha
-      float: none
 
 /*MOBILE
 
