@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+    oooo   oooo oooo   oooo oooooooooo
+     8888o  88   888  o88    888    888
+     88 888o88   888888      888oooo88
+     88   8888   888  88o    888
+    o88o    88  o888o o888o o888o
+  -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title></title>
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="all" href="css/aos.css">
+    <link rel="stylesheet" type="text/css" media="all" href="style.css">
+    <!--if lt IE 9script(src='/wp-content/themes/nkp/unsemantic/js/html5.min.js')
+    -->
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+      window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#edeff5",
+          "text": "#838391"
+        },
+        "button": {
+          "background": "#4b81e8"
+        }
+      },
+      "position": "bottom",
+      "content": {
+        "message": "This site uses cookies to make the site simpler. Further information is provided in our",
+        "dismiss": "Accept",
+        "link": "Privacy Policy",
+        "href": "/privacy-policy/"
+      }
+      })});
+    </script>
+
+  </head>
+  <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+
+    <div id="logo" itemscope="" itemtype="http://schema.org/Physician">
+      <a itemprop="url" href="#" title="{{{Practice Name}}}, {{{Doctor Name}}}, {{{City}}}, {{{State}}}">
+        <img class="img-resp" itemprop="logo" src="images/logo.png" alt="{{{Practice Name}}}, {{{Doctor Name}}}, {{{City}}}, {{{State}}}">
+      </a>
+    </div>
+
+    <nav class="stellarnav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Our Services</a>
+            <ul>
+              <li><a href="#">How deep?</a>
+                <ul>
+                  <li><a href="#">Deep</a>
+                    <ul>
+                      <li><a href="#">Even deeper</a>
+                        <ul>
+                          <li><li><a href="#">Item</a></li></li>
+                          <li><li><a href="#">Item</a></li></li>
+                          <li><li><a href="#">Item</a></li></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                      <li><a href="#">Item</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Item</a></li>
+                  <li><a href="#">Item</a></li>
+                  <li><a href="#">Item</a></li>
+                  <li><a href="#">Item</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+            </ul>
+          </li>
+          <li><a href="">Dr. Smith</a></li>
+          <li><a href="">Photos</a></li>
+          <li><a href="">News</a></li>
+          <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="slider" class="grid-100 grid-parent">
+      <ul class="slides">
+        <li>
+          <div class="slide1"></div>
+        </li>
+      </ul>
+    </div>
+    <!-- #/slider-->
+
+    <footer>
+      <div class="grid-container tac">
+        <div>© <?php echo(date('Y')); ?> Dr. John Smith. All Rights Reserved. <a href="http://www.nkpmedical.com" target="_blank">Website Design & SEO by NKP Medical</a></div>
+        <div><i class="fa fa-th-large"></i> <a href="/sitemap/">Sitemap</a> | <a href="/hipaa-privacy-policy/">HIPAA Privacy Policy</a> | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-of-use/">Terms & Conditions</a></div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/aos.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <!-- / ON THE SERVER /-->
+    <script type="text/javascript" src="https://static.nkpmedical.com/unsemantic/js/jquery.flexslider.min.js"></script>
+    <script type="text/javascript" src="https://static.nkpmedical.com/stellarnav/stellarnav.min.js"></script>
+    <!-- / ON THE SERVER /-->
+
+    <!-- AOS initialise -->
+    <script type="text/javascript">
+       AOS.init({
+         duration: 1200,
+       })
+       $(function() {
+        AOS.init();
+      });
+
+      $(window).on('load', function() {
+        AOS.refresh();
+      });
+    </script>
+
+  </body>
+</html>

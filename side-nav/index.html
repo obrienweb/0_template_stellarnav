@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title></title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="all" href="css/aos.css">
     <link rel="stylesheet" type="text/css" media="all" href="style.css">
     <!--if lt IE 9script(src='/wp-content/themes/nkp/unsemantic/js/html5.min.js')
     -->
@@ -44,52 +45,73 @@
   </head>
   <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
 
+    <div id="myNav" class="nav-overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div class="overlay-content">
+        <div class="stellarnav main-menu">
+          <ul id="menu-main-navigation">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Our Services</a>
+              <ul>
+                <li><a href="#">How deep?</a>
+                  <ul>
+                    <li><a href="#">Deep</a>
+                      <ul>
+                        <li><a href="#">Even deeper</a>
+                          <ul>
+                            <li><li><a href="#">Item</a></li></li>
+                            <li><li><a href="#">Item</a></li></li>
+                            <li><li><a href="#">Item</a></li></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+              </ul>
+            </li>
+            <li><a href="">Dr. Smith</a></li>
+            <li><a href="">Photos</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <a id="nav-overlay-close" href="javascript:void(0)" onclick="closeNav()"></a>
+
     <div id="logo" itemscope="" itemtype="http://schema.org/Physician">
       <a itemprop="url" href="#" title="{{{Practice Name}}}, {{{Doctor Name}}}, {{{City}}}, {{{State}}}">
         <img class="img-resp" itemprop="logo" src="images/logo.png" alt="{{{Practice Name}}}, {{{Doctor Name}}}, {{{City}}}, {{{State}}}">
       </a>
     </div>
 
-    <nav class="stellarnav">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Our Services</a>
-            <ul>
-              <li><a href="#">How deep?</a>
-                <ul>
-                  <li><a href="#">Deep</a>
-                    <ul>
-                      <li><a href="#">Even deeper</a>
-                        <ul>
-                          <li><li><a href="#">Item</a></li></li>
-                          <li><li><a href="#">Item</a></li></li>
-                          <li><li><a href="#">Item</a></li></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Item</a></li>
-                      <li><a href="#">Item</a></li>
-                      <li><a href="#">Item</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Item</a></li>
-                  <li><a href="#">Item</a></li>
-                  <li><a href="#">Item</a></li>
-                  <li><a href="#">Item</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Item</a></li>
-              <li><a href="#">Item</a></li>
-              <li><a href="#">Item</a></li>
-              <li><a href="#">Item</a></li>
-            </ul>
-          </li>
-          <li><a href="">Dr. Smith</a></li>
-          <li><a href="">Photos</a></li>
-          <li><a href="">News</a></li>
-          <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <a class="open-nav" onclick="openNav()">
+        <div>MENU</div>
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+       </a>
+    </div><!-- ./nav-container-->
+
+    <div class="clear"></div>
 
     <div id="slider" class="grid-100 grid-parent">
       <ul class="slides">
@@ -109,10 +131,40 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/aos.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <!-- / ON THE SERVER /-->
     <script type="text/javascript" src="https://static.nkpmedical.com/unsemantic/js/jquery.flexslider.min.js"></script>
     <script type="text/javascript" src="https://static.nkpmedical.com/stellarnav/stellarnav.min.js"></script>
     <!-- / ON THE SERVER /-->
+
+    <!-- Open Close Navigation -->
+    <script type="text/javascript">
+      function openNav() {
+        document.getElementById("myNav").style.transform = "translateX(0px)";
+        document.getElementById("nav-overlay-close").style.opacity = "1";
+        document.getElementById("nav-overlay-close").style.visibility = "visible";
+      }
+      function closeNav() {
+        document.getElementById("myNav").style.transform = "translateX(100%)";
+        document.getElementById("nav-overlay-close").style.opacity = "0";
+        document.getElementById("nav-overlay-close").style.visibility = "hidden";
+      }
+    </script>
+
+    <!-- AOS initialise -->
+    <script type="text/javascript">
+       AOS.init({
+         duration: 1200,
+       })
+       $(function() {
+        AOS.init();
+      });
+
+      $(window).on('load', function() {
+        AOS.refresh();
+      });
+    </script>
+
   </body>
 </html>
