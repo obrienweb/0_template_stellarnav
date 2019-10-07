@@ -17,6 +17,8 @@
 $font-stack: 'proxima-nova', sans-serif
 $font-size: 1.6rem
 
+$primary-color: #1c97d4
+
 $black: #000
 $gray: #8b8b8b
 $white: #fff
@@ -42,15 +44,12 @@ html
   box-sizing: border-box
   font-size: 62.5%
   @media only screen and (max-width: 68.75em)
-    /* line 26, /Users/davidobrien/Documents/VersaTables/Website Mockups/Landing Sqeeeze Page/VT-LandingPage-HTML/sass/_base.scss */
     html
       font-size: 50%
   @media only screen and (max-width: 37.5em)
-    /* line 26, /Users/davidobrien/Documents/VersaTables/Website Mockups/Landing Sqeeeze Page/VT-LandingPage-HTML/sass/_base.scss */
     html
       font-size: 45%
   @media only screen and (max-width: 31.25em)
-    /* line 26, /Users/davidobrien/Documents/VersaTables/Website Mockups/Landing Sqeeeze Page/VT-LandingPage-HTML/sass/_base.scss */
     html
       font-size: 40%
 
@@ -59,6 +58,12 @@ body
   font-size: $font-size
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
+::selection
+  background: $primary-color
+
+::-moz-selection
+  background: $primary-color
 
 h1, h2, h3, h4, h5
   font-family: $font-stack
@@ -93,15 +98,15 @@ p
   line-height: 2
 
 a
-  color: $blue
+  color: $primary-color
   text-decoration: none
   +transition
   &:visited, &:link
-    color: $blue
+    color: $primary-color
     text-decoration: none
     +transition
   &:hover
-    color: darken($blue, 20%)
+    color: darken($primary-color, 20%)
     text-decoration: none
 
 ul, ol
@@ -238,7 +243,7 @@ img
   .slides
     > li
       > div
-        height: 820px
+        height: 800px
         background-repeat: no-repeat
         background-position: top center
         background-size: cover
@@ -257,14 +262,14 @@ img
     .single
       float: left
     .pagination
-      margin-bottom: 20px
+      margin-bottom: 2rem
       font-size: $font-size
       .current
-        +circle($blue,$white,1px solid $blue)
+        +circle($primary-color,$white,1px solid $primary-color)
       a
-        +circle(transparent,$blue,1px solid $blue)
+        +circle(transparent,$primary-color,1px solid $primary-color)
         &:hover
-          background: $blue
+          background: $primary-color
           color: $white
     li
       padding: 5px
@@ -291,7 +296,7 @@ img
           +transition(all .25s ease-out)
           &:hover
             color: $white
-            background: $blue
+            background: $primary-color
             padding-left: 3rem
       ul
         margin-left: 2rem !important
